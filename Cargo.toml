@@ -1,0 +1,10 @@
+[package]
+name = "svg-pk"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+svg = "0.17"
+rand = "0.8"
+rand_chacha = "0.3"
+noise = "0.9"
