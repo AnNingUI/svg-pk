@@ -59,7 +59,7 @@ fn rank_label(rank: Rank, suit: Suit, color: &str) -> Group {
     let label = svg::node::element::Text::new(rank.label())
         .set("x", 55)
         .set("y", 125)
-        .set("font-size", 42)
+        .set("font-size", 54)
         .set("font-family", "serif")
         .set("fill", color)
         .set("text-anchor", "middle");
@@ -67,8 +67,8 @@ fn rank_label(rank: Rank, suit: Suit, color: &str) -> Group {
 
     let sym = svg::node::element::Text::new(suit.symbol())
         .set("x", 55)
-        .set("y", 165)
-        .set("font-size", 36)
+        .set("y", 185)
+        .set("font-size", 48)
         .set("font-family", "serif")
         .set("fill", color)
         .set("text-anchor", "middle");
@@ -77,8 +77,8 @@ fn rank_label(rank: Rank, suit: Suit, color: &str) -> Group {
     // Bottom-right (rotated 180): suit symbol closer to center, rank text closer to edge
     let sym2 = svg::node::element::Text::new(suit.symbol())
         .set("x", 945)
-        .set("y", 1330)
-        .set("font-size", 36)
+        .set("y", 1345)
+        .set("font-size", 48)
         .set("font-family", "serif")
         .set("fill", color)
         .set("text-anchor", "middle")
@@ -88,7 +88,7 @@ fn rank_label(rank: Rank, suit: Suit, color: &str) -> Group {
     let label2 = svg::node::element::Text::new(rank.label())
         .set("x", 945)
         .set("y", 1375)
-        .set("font-size", 42)
+        .set("font-size", 54)
         .set("font-family", "serif")
         .set("fill", color)
         .set("text-anchor", "middle")
@@ -879,7 +879,7 @@ fn king_figure(_suit: Suit, _primary: &str, secondary: &str, highlight: &str, se
                 .set("fill", "none")
                 .set("stroke", highlight)
                 .set("stroke-width", 2.5)
-                .set("transform", format!("rotate({} {} {})", i * 45, CX, cy)) // subtle rotation for a dynamic, crystalline feel
+                .set("transform", format!("rotate({} {} {})", i * 45, CX, cy)), // subtle rotation for a dynamic, crystalline feel
         );
 
         // Inner spire echo — smaller, tighter
@@ -905,7 +905,7 @@ fn king_figure(_suit: Suit, _primary: &str, secondary: &str, highlight: &str, se
                 .set("stroke", secondary)
                 .set("stroke-width", 1.8)
                 .set("opacity", 0.7)
-                .set("transform", format!("rotate({} {} {})", i * 45, CX, cy)) // subtle rotation for a dynamic, crystalline feel
+                .set("transform", format!("rotate({} {} {})", i * 45, CX, cy)), // subtle rotation for a dynamic, crystalline feel
         );
     }
 
